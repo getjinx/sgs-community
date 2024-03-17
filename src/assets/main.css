@@ -1,35 +1,89 @@
-@import './base.css';
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+input{
+    margin: 0;
+    padding: 0;
+}
+*{
+    /* 内减模式 */
+    box-sizing: border-box;
+}
 
+body{
+    font: 16px/1.5 "Helvetica Neue", Helvetica,Arial, "Microsoft Yahei",
+    "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+    color: #333;
+}
+
+ul,
+ol{
+    list-style: none;
+}
+
+/* 去除默认的倾斜效果 */
+em,
+i{
+    font-style: normal;
+}
+
+/* 去除a 标签默认下划线，文字颜色 */
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+/* 设置img的垂直对齐居中方式， 去除img默认间隙 */
+img{
+    vertical-align: middle;
+}
+/* 去除input默认的样式 */
+input{
+    border: none;
+    outline: none;
+    color: #333;
+}
+
+/* 左浮动 */
+.fl{
+    float: left;
+}
+
+/* 右浮动 */
+.fr{
+    float: right;
+}
+
+/* 双伪元素清楚法 */
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: table;
+}
+.clearfix::after{
+    clear: both;
+}
 #app {
-  max-width: 1280px;
+  min-width: 1300px;
   margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
 }
-
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.wrapper{
+  width: 1300px;
+  margin: 0 auto;
 }
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.flex {
+  display:flex;
+  justify-content: center;
+  align-items: center;
 }
